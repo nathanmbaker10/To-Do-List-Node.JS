@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/javascript" src="script.js"></script>
+</head>
+
+
+<body>
+
+
+
+<center><h1>To Do List</h1>
+
+  <table id="taskTable">
+    <tr>
+      <td> Item </td>
+      <td> Due Date </td>
+      <td> Remove Button </td>
+    </tr>
+  </table>
+  <br><br>
+  <input type="text" placeholder="Task Name" id="taskNameBox"></input>
+  <input type="text" placeholder="Due Date" id="dueDateBox"></input>
+  <button onclick="newItemClicked()">Create</button>
+</center>
+<script>
+var resultData = <%- JSON.stringify(resultData) %>
+console.log("Render called")
+populateTable(resultData)
+</script>
+</body>
+</html>
