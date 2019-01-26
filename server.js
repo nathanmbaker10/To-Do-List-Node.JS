@@ -15,7 +15,7 @@ app.set('view engine','ejs');
 var router = express.Router();
 
 // a “get” at the root of our web app: http://localhost:3000/api
-router.get('/', function(req, res) {
+app.get('/', function(req, res) {
   console.log("GET")
   var dataResult
 
@@ -28,7 +28,7 @@ router.get('/', function(req, res) {
 
 });
 
-router.post('/buttonclick', function(req, res) {
+app.post('/buttonclick', function(req, res) {
   console.log("BUTTON")
   var id = req.query.id
   console.log(id);
@@ -42,7 +42,7 @@ router.post('/buttonclick', function(req, res) {
 
 })
 
-router.post('/additem', function(req, res) {
+app.post('/additem', function(req, res) {
   console.log("NEW ITEM")
   var name = req.query.name
   var dueDate = req.query.dueDate
