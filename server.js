@@ -69,7 +69,7 @@ MongoClient.connect('mongodb://nathanmbaker:Soccerguy1@ds055689.mlab.com:55689/t
     console.log("Connected successfully to server");
 
     db = client.db('to-do-list-nathan');
-    port = process.env.PORT || 3000
+    port = process.env.PORT || 80
     app.listen(port, () => {
         console.log('WORKING')
     })
