@@ -74,5 +74,3 @@ MongoClient.connect('mongodb://nathanmbaker:Soccerguy1@ds055689.mlab.com:55689/t
         console.log('WORKING')
     })
 })
-
-app.use('/api', router);
