@@ -13,7 +13,7 @@ function newItemClicked() {
   taskLength++;
   console.log("Task Length: " + taskLength);
   $.ajax ({
-        url: 'http://localhost:3000/api/additem?name=' + taskObject.name + '&dueDate=' + taskObject.dueDate,
+        url: 'https://to-do-list-node-albinson.herokuapp.com/additem?name=' + taskObject.name + '&dueDate=' + taskObject.dueDate,
         type: "POST",
         success: populateTable
 })
@@ -57,7 +57,7 @@ function addRow(name, dueDate, id){
 function addButtonOnClick(){
   $(".removeButton").on('click', function(){
     $.ajax ({
-        url: 'http://localhost:3000/api/buttonclick?id=' + this.id,
+        url: 'https://to-do-list-node-albinson.herokuapp.com/buttonclick?id=' + this.id,
         type: "POST",
         success: populateTable
        })
